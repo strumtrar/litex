@@ -63,6 +63,7 @@ vpath %.a $(PACKAGES:%=../%)
 		$(PACKAGES:%=-L../%) \
 		-Wl,--whole-archive \
 		-Wl,--gc-sections \
+		-Wl,--no-dynamic-linker \
 		$(LIBS:lib%=-l%) \
 
 
